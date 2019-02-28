@@ -1,0 +1,392 @@
+/* browser reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* global styles */
+
+body {
+    color: #333;
+    font-family: 'Roboto',
+        sans-serif;
+}
+
+.outer-grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 415px auto 86px;
+    grid-template-areas:
+        "head"
+        "main"
+        "foot";
+}
+
+.section-title {
+    font-family: 'Roboto Slab',
+        serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    text-align: center;
+}
+
+.section-title::before,
+.section-title::after {
+    content: " — ";
+}
+
+/* specific styles */
+
+header {
+    grid-area: head;
+    background-image: url(jaguar-etype.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    display: none;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: foot;
+    background-color: #333;
+    color: white;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.footer-text {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.footer-icons {
+    text-align: right;
+    font-size: 3em;
+    margin-right: 20px;
+}
+
+.footer-icons>i {
+    margin-left: 20px;
+}
+
+.head-grid-container {
+    display: grid;
+    grid-template-areas:
+        "title";
+}
+
+
+
+.menu-item {
+    list-style: none;
+    display: inline-block;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bolder;
+    font-size: 1.4em;
+    margin-right: 50px;
+}
+
+.menu-item:last-child {
+    margin-right: 18px;
+}
+
+
+.title {
+    grid-area: title;
+    display: flex;
+    align-items: end;
+}
+
+.title>h1 {
+    color: white;
+    font-family: 'Roboto Slab',
+        serif;
+    font-weight: bolder;
+    font-size: 4em;
+    margin-left: 22px;
+    margin-bottom: 6px;
+    letter-spacing: 3px;
+}
+
+
+.featured {
+    margin-top: 45px;
+    margin-bottom: 6px;
+}
+
+
+/* cars */
+
+.cars {
+    display: grid;
+    grid-template-areas:
+        "car-1"
+        "car-2"
+        "car-3";
+    grid-gap: 1em;
+}
+
+.car {
+    max-width: 100%;
+}
+
+.car-1 {
+    grid-area: car-1;
+}
+
+.car-2 {
+    grid-area: car-2;
+}
+
+.car-3 {
+    grid-area: car-3;
+}
+
+
+.car-box>h3 {
+    font-family: 'Roboto',
+        sans-serif;
+    font-weight: lighter;
+    margin-left: 9px;
+    margin-bottom: 3px;
+}
+
+.car-box,
+.content>div>div {
+    border: 1px solid #ccc;
+    background-color: #eee;
+}
+
+
+/* content */
+
+.content {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas:
+        "shows"
+        "ticket"
+}
+
+.ticket>div {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.shows {
+    grid-area: shows;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+        "s-title s-title"
+        "cal-1 l-1"
+        "cal-2 l-2"
+        "cal-3 l-3"
+        "cal-4 l-4"
+        "cal-5 l-5";
+}
+
+.shows>div {
+    padding: 10px;
+}
+
+.month {
+    color: #D82201;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.date {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Roboto Slab',
+}
+
+.location>h3,
+.location>p {
+    padding-left: 12px;
+    padding-top: 5px;
+}
+
+
+.shows>.section-title {
+    grid-area: s-title;
+    align-self: end;
+    margin-bottom: 7px;
+}
+
+#cal-1 {
+    grid-area: cal-1;
+}
+
+#cal-2 {
+    grid-area: cal-2;
+}
+
+#cal-3 {
+    grid-area: cal-3;
+}
+
+#cal-4 {
+    grid-area: cal-4;
+}
+
+#cal-5 {
+    grid-area: cal-5;
+}
+
+#location-1 {
+    grid-area: l-1;
+}
+
+#location-2 {
+    grid-area: l-2;
+}
+
+#location-3 {
+    grid-area: l-3;
+}
+
+#location-4 {
+    grid-area: l-4;
+}
+
+#location-5 {
+    grid-area: l-5;
+}
+
+.ticket {
+    grid-area: ticket;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2.4fr 0.2fr 2.4fr;
+    column-gap: 17px;
+    grid-template-areas:
+        "t-title"
+        "early"
+        "."
+        "regular";
+}
+
+.ticket>.section-title {
+    grid-area: t-title;
+    align-self: end;
+    margin-bottom: 7px;
+}
+
+#early,
+#regular {
+    grid-area: early;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+#early>h2,
+#regular>h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#early>button,
+#regular>button {
+    width: 250px;
+    height: 50px;
+    margin-top: 20px;
+    align-self: center;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    color: white;
+    border: none;
+    border-bottom: 5px solid;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.6);
+}
+
+#early>button {
+    background-image: linear-gradient(to bottom, #50BD50, #419241 100%);
+    border-color: #008000;
+}
+
+#regular>button {
+    background-image: linear-gradient(to bottom, #D3D3D3, #BBBBBB 100%);
+    border-color: #AAA;
+}
+
+#regular>h2,
+#regular>p {
+    color: #8D8D8D;
+}
+
+#regular {
+    grid-area: regular;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .content {
+        display: grid;
+        grid-template-columns: 0.3fr 1fr 1fr 0.3fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: ". shows ticket .";
+        column-gap: 17px;
+        margin-top: 14px;
+        margin-bottom: 30px;
+    }
+
+    .cars {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "car-1 car-2 car-3";
+        column-gap: 17px;
+        justify-items: center;
+        margin-left: 17px;
+        margin-right: 17px;
+    }
+
+    .head-grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "title nav";
+    }
+
+    nav {
+        grid-area: nav;
+        display: flex;
+        align-items: end;
+        margin-left: auto;
+        margin-bottom: 15px;
+    }
+
+    .ticket>div {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    footer {
+        grid-area: foot;
+        background-color: #333;
+        color: white;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
