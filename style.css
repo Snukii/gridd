@@ -5,28 +5,22 @@
     padding: 0;
 }
 
-
 /* global styles */
 
 body {
     color: #333;
-    font-family: 'Roboto',
-        sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .outer-grid-container {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 415px auto 86px;
-    grid-template-areas:
-        "head"
-        "main"
-        "foot";
+    grid-template-areas: "head""main""foot";
 }
 
 .section-title {
-    font-family: 'Roboto Slab',
-        serif;
+    font-family: 'Roboto Slab', serif;
     text-transform: uppercase;
     font-size: 2em;
     text-align: center;
@@ -81,11 +75,8 @@ footer {
 
 .head-grid-container {
     display: grid;
-    grid-template-areas:
-        "title";
+    grid-template-areas: "title";
 }
-
-
 
 .menu-item {
     list-style: none;
@@ -101,7 +92,6 @@ footer {
     margin-right: 18px;
 }
 
-
 .title {
     grid-area: title;
     display: flex;
@@ -110,30 +100,25 @@ footer {
 
 .title>h1 {
     color: white;
-    font-family: 'Roboto Slab',
-        serif;
+    font-family: 'Roboto Slab', serif;
     font-weight: bolder;
     font-size: 4em;
     margin-left: 22px;
     margin-bottom: 6px;
+    margin-top: auto;
     letter-spacing: 3px;
 }
-
 
 .featured {
     margin-top: 45px;
     margin-bottom: 6px;
 }
 
-
 /* cars */
 
 .cars {
     display: grid;
-    grid-template-areas:
-        "car-1"
-        "car-2"
-        "car-3";
+    grid-template-areas: "car-1""car-2""car-3";
     grid-gap: 1em;
 }
 
@@ -153,10 +138,8 @@ footer {
     grid-area: car-3;
 }
 
-
 .car-box>h3 {
-    font-family: 'Roboto',
-        sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: lighter;
     margin-left: 9px;
     margin-bottom: 3px;
@@ -168,15 +151,12 @@ footer {
     background-color: #eee;
 }
 
-
 /* content */
 
 .content {
     display: grid;
     grid-gap: 1em;
-    grid-template-areas:
-        "shows"
-        "ticket"
+    grid-template-areas: "shows""ticket"
 }
 
 .ticket>div {
@@ -189,13 +169,7 @@ footer {
     display: grid;
     grid-template-columns: 0.1fr 1fr;
     grid-template-rows: repeat(6, 1fr);
-    grid-template-areas:
-        "s-title s-title"
-        "cal-1 l-1"
-        "cal-2 l-2"
-        "cal-3 l-3"
-        "cal-4 l-4"
-        "cal-5 l-5";
+    grid-template-areas: "s-title s-title""cal-1 l-1""cal-2 l-2""cal-3 l-3""cal-4 l-4""cal-5 l-5";
 }
 
 .shows>div {
@@ -221,7 +195,6 @@ footer {
     padding-left: 12px;
     padding-top: 5px;
 }
-
 
 .shows>.section-title {
     grid-area: s-title;
@@ -275,11 +248,7 @@ footer {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2.4fr 0.2fr 2.4fr;
     column-gap: 17px;
-    grid-template-areas:
-        "t-title"
-        "early"
-        "."
-        "regular";
+    grid-template-areas: "t-title""early"".""regular";
 }
 
 .ticket>.section-title {
@@ -336,7 +305,6 @@ footer {
     grid-area: regular;
 }
 
-
 @media only screen and (min-width: 600px) {
     .content {
         display: grid;
@@ -363,8 +331,7 @@ footer {
         display: grid;
         grid-template-columns: auto auto;
         grid-template-rows: auto;
-        grid-template-areas:
-            "title nav";
+        grid-template-areas: "title nav";
     }
 
     nav {
@@ -373,6 +340,7 @@ footer {
         align-items: end;
         margin-left: auto;
         margin-bottom: 15px;
+        margin-top: auto;
     }
 
     .ticket>div {
